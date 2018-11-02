@@ -1,10 +1,12 @@
 #include "../headers/classP.h"
 #include <iostream>
 
-float Point::getX() const {
+float *Point::getX()  { // метод для показа адреса х
+    return &x;
+}
+float Point::ggetX() const { // метод для показа значения х
     return x;
 }
-
 void Point::setX(float x) {
     Point::x = x;
 }
@@ -26,8 +28,9 @@ float *ShadowPoint::getX() const {
     return x;
 }
 
-void ShadowPoint::setX(float *x) {
-    ShadowPoint::x = x;
+void ShadowPoint::setX(float *x1) {
+    *x1=*x1+1;
+    ShadowPoint::x = x1;
 }
 
 float *ShadowPoint::getY() const {

@@ -4,7 +4,9 @@
 class Point {
     float x,y;
 public:
-    float getX() const;
+    float *getX() ;
+
+    float ggetX() const;
 
     void setX(float x);
 
@@ -21,7 +23,7 @@ class ShadowPoint{
 public:
     float *getX() const;
 
-    void setX(float *x);
+    void setX(float *x1);
 
     float *getY() const;
 
